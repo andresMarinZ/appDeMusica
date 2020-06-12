@@ -47,8 +47,11 @@ export class HomeComponent implements OnInit {
       this.error = true;
       this.mensajeError = error.error.error.message;
       if (this.mensajeError === 'The access token expired') {
-        location.reload();
-        this.token();
+        
+        this.token(); 
+        setTimeout(function(){
+          location.reload();
+        },2000);
       }
     })
 
