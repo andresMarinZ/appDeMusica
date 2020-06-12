@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
       this.token();
       setTimeout(function(){
         location.reload();
-      },3000);
+      },2000);
       
     }
     this.releases();
