@@ -9,10 +9,8 @@ export class SpotifyService {
     console.log('Spotify Service Listo');
   }
 
-  obtenerToken(){
-      // return this.http.get('https://spotyapp23.herokuapp.com/spotify/26624b14d77b4bd2871b5666f0a156aa/0703ad9d42be45cea86ab6db944dac3d').pipe(map( data => data['access_token']))
-     
-        this.http.get('https://spotyapp23.herokuapp.com/spotify/26624b14d77b4bd2871b5666f0a156aa/0703ad9d42be45cea86ab6db944dac3d').subscribe((data:any) => {
+  obtenerToken(){     
+        this.http.get('https://spotyapp23.herokuapp.com/spotify/'clienteid'/0703ad9d42be45cea86ab6db944dac3d').subscribe((data:any) => {
           localStorage.setItem('token',data.access_token);
         })    
   }
