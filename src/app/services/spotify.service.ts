@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient,HttpHeaders } from '@angular/common/http';
 import { map } from "rxjs/operators";
+import { environment } from "../../environments/environment";
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +11,7 @@ export class SpotifyService {
   }
 
   obtenerToken(){     
-        this.http.get('https://spotyapp23.herokuapp.com/spotify/'clienteid'/0703ad9d42be45cea86ab6db944dac3d').subscribe((data:any) => {
+        this.http.get('').subscribe((data:any) => {
           localStorage.setItem('token',data.access_token);
         })    
   }
@@ -21,7 +22,7 @@ export class SpotifyService {
     
     // .pipe(map( data => data['access_token']))
 
-    const url=`https://api.spotify.com/v1/${query}`
+    const url=`${environment.SpotifyGet}${query}`
 
     const headers = new HttpHeaders({
       'Authorization': 'Bearer '+ localStorage.getItem('token')

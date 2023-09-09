@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlSpotifyHeroku:'https://spotyapp23.herokuapp.com/spotify/',
+  clienteid:'',
+  key:'0703ad9d42be45cea86ab6db944dac3d',
+  SpotifyGet:'https://api.spotify.com/v1/',
 };
 
 /*
