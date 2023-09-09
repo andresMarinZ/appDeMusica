@@ -4,10 +4,10 @@
 
 export const environment = {
   production: false,
-  urlSpotifyHeroku:'https://spotyapp23.herokuapp.com/spotify/',
+  urlSpotifyHeroku:'',
   clienteid:'',
-  key:'0703ad9d42be45cea86ab6db944dac3d',
-  SpotifyGet:'https://api.spotify.com/v1/',
+  key:'',
+  SpotifyGet:'',
 };
 
 /*
